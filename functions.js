@@ -18,7 +18,8 @@ OUTPUT:
 */
 
 export function findByName(name, arr) {
-    return {};
+    const names = arr.filter(animal => animal.name === 'sassy') [0];
+    return names;
 }
 
 /*
@@ -30,7 +31,8 @@ OUTPUT:
 ]*/
 
 export function getDogs(arr) {
-    return [];
+    const doggy = arr.filter(animal => animal.type === 'dog');
+    return doggy;
 }
 
 /*
@@ -39,7 +41,8 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    return [];
+    const doggyName = arr.filter(animal => animal.name === 'dog'); 
+    return doggyName;
 }
 
 
@@ -50,17 +53,18 @@ Output:
 */
 
 export function makeArrayOfNames(arr) {
-    return [];
+    const ArrayName = arr.map(animal => animal.name);
+    return ArrayName;
 }
-
-/*
-Output:
+/*Output:
 
 ['cat', 'frog', 'dog', 'dog']
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    const Arraytype = arr.map(animal => 
+        animal.type.array.reverse());
+    return Arraytype;
 }
 
 /*
@@ -75,7 +79,8 @@ Output:
 */
 
 export function makeSpanishLanguageArray(arr) {
-    return [];
+    const spanishArray = arr.map(spanish => spanish.nombre);
+    return spanishArray;
 }
 
 /*
