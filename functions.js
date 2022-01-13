@@ -41,7 +41,7 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    const doggyName = arr.filter(animal => animal.name === 'dog'); 
+    const doggyName = arr.filter(animal => animal.name > 1);
     return doggyName;
 }
 
@@ -62,9 +62,7 @@ export function makeArrayOfNames(arr) {
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    const Arraytype = arr.map(animal => 
-        animal.type.array.reverse());
-    return Arraytype;
+    return ;
 }
 
 /*
@@ -79,8 +77,11 @@ Output:
 */
 
 export function makeSpanishLanguageArray(arr) {
-    const spanishArray = arr.map(spanish => spanish.nombre);
-    return spanishArray;
+    const spanish = arr.map(spanish => {
+        return { nombre: spanish.name,
+            tipo: spanish.type };
+    });
+    return spanish;
 }
 
 /*
@@ -118,7 +119,10 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    const shouting = arr.map(animal => {
+        return { name: animal.name.toUpperCase(), type: animal.type };
+    });
+    return shouting;
 }
 
 
@@ -129,7 +133,8 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    const string = arr.map(thing => `${thing.name}${thing.type}`);
+    return string;
 }
 
 /*
@@ -155,7 +160,13 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+    const makeArray = arr.map(animal => {
+        return [
+            ['name', animal.name],
+            ['type', animal.type]
+        ];
+    });
+    return makeArray;
 }
 
 ////////////////////////////////////////////////////////
