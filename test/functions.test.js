@@ -51,7 +51,7 @@ test('should return dogs', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-skip('should return dogs names', (expect) => {
+test('should return dogs names', (expect) => {
     const expected = ['scooter', 'sassy'];
     
     const actual = getNamesOfDogs(otherPets);
@@ -66,7 +66,7 @@ test('should make an array of names', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-test('should make a reverse array of type', (expect) => {
+skip('should make a reverse array of type', (expect) => {
     const expected = ['frog', 'cat'];
     const actual = makeReversedArrayOfTypes(pets);
 
@@ -101,7 +101,7 @@ skip('should return all objects with an added isHungry property equal to true', 
     expect.deepEqual(actual, expected);
 });
 
-skip('should return a shouting array', (expect) => {
+test('should return a shouting array', (expect) => {
     const expected = [
         { name: 'SCOOTER', type: 'dog' },
         { name: 'SASSY', type: 'dog' },
@@ -113,14 +113,14 @@ skip('should return a shouting array', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-skip('should return a proper array of strings', (expect) => { 
-    const expected = ['scooterpuppy', 'sassypuppy', 'legzofrog', 'fluffsquirrel'];
+test('should return a proper array of strings', (expect) => { 
+    const expected = ['scooterdog', 'sassydog', 'legzofrog', 'fluffsquirrel'];
     const actual = makeStringArray(otherPets);
 
     expect.deepEqual(actual, expected);
 });
 
-skip('should return a proper array of arrays', (expect) => {
+test('should return a proper array of arrays', (expect) => {
     const expected = [
         [['name', 'scooter'], ['type', 'dog']], 
         [['name', 'sassy'], ['type', 'dog']], 
